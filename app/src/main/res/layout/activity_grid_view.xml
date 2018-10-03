@@ -53,12 +53,106 @@
         android:textSize="30sp" />
 
     <Spinner
-        android:id="@+id/spinner5"
+        android:id="@+id/spinner1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="115dp" />
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/gradient_spinner"
+
+
+        />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/gradient_spinner"
+
+        />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginStart="38dp"
+        android:text="Yes" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="38dp"
+        android:text="No" />
+
+
+
+
+    <EditText
+        android:id="@+id/cracker"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+
+        android:text="1"
+        tools:text="2" />
+
+    <Button
+        android:id="@+id/mns"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginStart="38dp"
+
+        android:text="@string/minus"
+        tools:ignore="RelativeOverlap"
+        android:layout_marginLeft="38dp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/pls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="38dp"
+        android:text="@string/plus"
+        tools:ignore="RelativeOverlap"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp" />
+
+    <Button
+
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/add" />
 
 
 </RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/meditation"
+        android:title="Meditations"
+        android:icon="@drawable/music"
+
+        ></item>
+    <item
+        android:id="@+id/badges"
+        android:title="Badges"
+        android:icon="@drawable/bookmark"
+
+        ></item>
+    <item
+        android:id="@+id/alarms"
+        android:title="Alarms"
+        android:icon="@drawable/alarm_clock"
+
+        ></item>
+    <item
+        android:id="@+id/about"
+        android:title="About Us"
+        android:icon="@drawable/info"
+
+        ></item>
+    <item
+        android:id="@+id/w_l_g"
+        android:title="Weight Loss Graph"
+        android:icon="@drawable/line_chart"
+
+        ></item>
+    <item
+        android:id="@+id/history"
+        android:title="History"
+        android:icon="@drawable/history_button"
+
+        ></item>
+    <item
+        android:id="@+id/sign_out"
+        android:title="Sign Out"
+        android:icon="@drawable/key"
+
+        ></item>
+
+</menu>
