@@ -1,9 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string name="open">NavBar</string>
     <string name="close">NavBar</string>
     <string name="app_name">BeBalanced</string>
-
 
 
     <string-array name="fruits_name">
@@ -27,7 +26,8 @@
         <item>Strawberries</item>
     </string-array>
 
-    <string-array name="veggies_name">
+    <string-array name="veggies_name1">
+        <item>Veggies1</item>
         <item>Asparagus</item>
         <item>Broccoli</item>
         <item>Brussels Sprouts</item>
@@ -43,7 +43,57 @@
         <item>Tomatoes</item>
     </string-array>
 
+    <string-array name="veggies_name2">
+        <item>Veggies2</item>
+        <item>Asparagus</item>
+        <item>Broccoli</item>
+        <item>Brussels Sprouts</item>
+        <item>Cabbage</item>
+        <item>Cauliflower</item>
+        <item>Celery</item>
+        <item>Cucumber</item>
+        <item>Lettuce</item>
+        <item>Onion</item>
+        <item>Radish</item>
+        <item>Sauerkraut</item>
+        <item>Spinach</item>
+        <item>Tomatoes</item>
+    </string-array>
+
+    <string-array name="cupsize">
+        <item>Cups</item>
+        <item tools:ignore="TypographyFractions">1/2 Cup</item>
+        <item>1 Cup</item>
+
+
+    </string-array>
+
+    <string-array name="bool">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
     <string-array name="meat_name">
+        <item>Protein 1</item>
+        <item>Chicken Breast</item>
+        <item>Scallops</item>
+        <item>Shrimp</item>
+        <item>Crab/Lobster</item>
+        <item>Ground Beef 95%</item>
+        <item>Ground Turkey 96%</item>
+        <item>Too Sirloin Steak</item>
+        <item>Turkey Breast</item>
+        <item>White Fish</item>
+        <item>1 Egg &amp; 2 Egg Whites</item>
+        <item>Starch/Crackers</item>
+        <item>Daily Calorie Intake</item>
+        <item>Turkey Breast</item>
+
+    </string-array>
+    <string-array name="meat_name1">
+        <item>Protein 2</item>
         <item>Chicken Breast</item>
         <item>Scallops</item>
         <item>Shrimp</item>
@@ -88,5 +138,22 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="add">Add</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="meditations">Meditations</string>
+    <string name="badges">Badges</string>
+    <string name="alarms">Alarms</string>
+    <string name="about_us">About Us</string>
+    <string name="weight_loss_graph">Weight Loss Graph</string>
+    <string name="history">History</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="how_are_you_today">How are you Today?</string>
+    <string name="apple">Apple</string>
+    <string name="morning">Morning</string>
+    <string name="songicon">icon</string>
+    <string name="songstopicon">songStopIcon</string>
+    <string name="songpauseicon">songPauseIcon</string>
+    <string name="songplayicon">songPlayicon</string>
+
 
 </resources>

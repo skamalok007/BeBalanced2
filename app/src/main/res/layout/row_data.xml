@@ -6,10 +6,11 @@
     <RelativeLayout
         android:id="@+id/gridviewdata"
         android:layout_width="match_parent"
-        android:layout_height="153dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#fff">
+        android:background="#fff"
+        android:layout_alignParentLeft="true">
 
         <ImageView
             android:id="@+id/images"

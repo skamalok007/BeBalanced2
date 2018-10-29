@@ -2,45 +2,45 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/meditation"
-        android:title="Meditations"
+        android:title="@string/meditations"
         android:icon="@drawable/music"
 
-        ></item>
+        />
     <item
         android:id="@+id/badges"
-        android:title="Badges"
+        android:title="@string/badges"
         android:icon="@drawable/bookmark"
 
-        ></item>
+        />
     <item
         android:id="@+id/alarms"
-        android:title="Alarms"
+        android:title="@string/alarms"
         android:icon="@drawable/alarm_clock"
 
-        ></item>
+        />
     <item
         android:id="@+id/about"
-        android:title="About Us"
+        android:title="@string/about_us"
         android:icon="@drawable/info"
 
-        ></item>
+        />
     <item
         android:id="@+id/w_l_g"
-        android:title="Weight Loss Graph"
+        android:title="@string/weight_loss_graph"
         android:icon="@drawable/line_chart"
 
-        ></item>
+        />
     <item
         android:id="@+id/history"
-        android:title="History"
+        android:title="@string/history"
         android:icon="@drawable/history_button"
 
-        ></item>
+        />
     <item
         android:id="@+id/sign_out"
-        android:title="Sign Out"
+        android:title="@string/sign_out"
         android:icon="@drawable/key"
 
-        ></item>
+        />
 
 </menu>

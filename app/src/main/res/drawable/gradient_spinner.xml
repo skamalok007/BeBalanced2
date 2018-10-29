@@ -20,6 +20,14 @@
                     />
             </shape>
         </item>
+        <item>
+            <bitmap
+                android:src="@drawable/arrow_drop"
+                android:gravity="right">
+        </bitmap>
+
+        </item>
 
     </layer-list></item>
+
 </selector>
