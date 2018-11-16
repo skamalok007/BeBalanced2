@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.google.gson.JsonObject;
 
@@ -13,8 +14,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -29,7 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null , 10);
+        super(context, DATABASE_NAME, null , 12);
 
 
     }
@@ -47,6 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("create table exercise (ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, userid TEXT, exercise_val INT,date DATE)");
         db.execSQL("create table bowel (ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, userid TEXT, bowel_val INT,date DATE)");
         db.execSQL("create table tea_data (ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, userid TEXT, tea INT,date DATE)");
+        db.execSQL("create table user_log (ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, userid TEXT, log_data TEXT, date DATE)");
 
 
 
@@ -538,8 +542,116 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public Cursor getGraphWeightData(){
+
+        SQLiteDatabase db= this.getWritableDatabase();
+
+        Calendar calendar=Calendar.getInstance();
+        SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+        String strDate = mdformat.format(calendar.getTime());
+
+        String dateBefore =getCalculatedDate(strDate, "yyyy-MM-dd hh:mm:ss a", -14);
+
+        String Query="select * from weight_data where date <='"+strDate+"' and date >='"+dateBefore+"'";
+
+        Cursor res= db.rawQuery(Query, null);
+
+        return res;
+
+    }
+
+
+
+    public static String getCalculatedDate(String date, String dateFormat, int days) {
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat s = new SimpleDateFormat(dateFormat);
+        cal.add(Calendar.DAY_OF_YEAR, days);
+        return s.format(new Date(String.valueOf(cal.getTime())));
+
+    }
+
+
+
+
+    public boolean insertUserLog(JSONObject params) throws JSONException {
+        SQLiteDatabase db= this.getWritableDatabase();
+
+        String col_3  = "log_data";
+
+
+
+        String user= params.getString("name");
+        String log_data = "0";
+        String date= params.getString("date");
+
+        if(params.has("fruits1")){
+            log_data="Fruits";
+        }else if(params.has("veggies1")){
+            log_data="Veggies";
+
+        }else if(params.has("protein1")){
+            log_data="Protein";
+
+        }else if(params.has("cracker_cnt")){
+            log_data="Cracker";
+
+        }else if(params.has("mrng")){
+            log_data="Drop";
+
+        }else if(params.has("water_cnt")){
+            log_data="Water";
+
+        }else if(params.has("weight_val")){
+            log_data="Weight";
+
+        }else if(params.has("exercise_val")){
+            log_data="Exercise";
+
+        }else if(params.has("bowel_val")){
+            log_data="Bowel";
+
+        }else if(params.has("tea_val")){
+            log_data="Tea";
+
+        }
+
+
+
+        ContentValues contentValues= new ContentValues();
+        contentValues.put(col_2,user);
+
+        contentValues.put(col_3,log_data);
+
+        contentValues.put(col_5,date);
+
+        long result= db.insert("user_log", null, contentValues);
+        if(result==-1){
+            return false;
+        }else{
+            return true;
+        }
+
+
+    }
+
+
+    public Cursor getUserLog(){
+        SQLiteDatabase db= this.getWritableDatabase();
+
+        Calendar calendar=Calendar.getInstance();
+        SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd ");
+        String strDate = mdformat.format(calendar.getTime());
+
+        String Query="select * from user_log Group By date";
+        Cursor res= db.rawQuery(Query, null);
+
+        return res;
+
+    }
 
 }
+
+
 
 
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:id="@+id/history_parent"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/music"
+        android:id="@+id/calendar_icon"
+        android:contentDescription="@string/songicon"
+        />
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:text="@string/action_example"
+        android:id="@+id/history_date_list"
+        android:layout_marginStart="10dp" />
+
+</LinearLayout>
+
+

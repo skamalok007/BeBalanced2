@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:layout_gravity="center"
@@ -29,7 +30,33 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".GridViewActivity" />
         <activity android:name=".Login" />
-        <activity android:name=".Meditation"></activity>
+        <activity android:name=".Meditation" />
+        <activity android:name=".AlarmMe" />
+        <activity android:name=".EditAlarm" />
+        <activity android:name=".WeightLossGraph" />
+        <activity
+            android:name=".AlarmNotification"
+            android:label="Alarm notification" />
+        <activity
+            android:name=".Preferences"
+            android:label="Preferences" />
+        <activity
+            android:name=".About"
+            android:label="About" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:process=":remote" />
+        <receiver android:name=".BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".History" />
+        <activity android:name=".historyGrid"></activity>
     </application>
 
 </manifest>

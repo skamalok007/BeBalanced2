@@ -80,34 +80,44 @@ public class GridViewActivity extends AppCompatActivity {
         try {
             if(Params.getString("section").equals("fruits")){
                 rs = myDb.insertFruits(Params);
+                myDb.insertUserLog(Params);
 
 
             }else if(Params.getString("section").equals("veggies")){
                 rs = myDb.insertVeggies(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("protein")){
                 rs = myDb.insertProteins(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("cracker")){
                 rs = myDb.insertCrackers(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("drop")){
                 rs = myDb.insertDrops(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("water")){
                 rs = myDb.insertWater(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("weight")){
                 rs = myDb.insertWeight(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("exercise")){
                 rs = myDb.insertExercise(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("bowel")){
                 rs = myDb.insertBowel(Params);
+                myDb.insertUserLog(Params);
 
             }else if(Params.getString("section").equals("tea")){
                 rs = myDb.insertTea(Params);
+                myDb.insertUserLog(Params);
 
             }
 
@@ -151,7 +161,7 @@ public class GridViewActivity extends AppCompatActivity {
         text_val1=findViewById(R.id.text_val1);
         text_val2=findViewById(R.id.text_val2);
         text_val3=findViewById(R.id.text_val3);
-        myDb= new DatabaseHelper(this);
+
 
 
 
@@ -413,7 +423,6 @@ public class GridViewActivity extends AppCompatActivity {
 
                     Params.put("name","bill");
                     Params.put("section","fruits");
-
                     Params.put("date", dateToStr);
 
 

@@ -425,22 +425,30 @@ CustomAdapter customAdapter=new CustomAdapter();
 
                 int id= menuItem.getItemId();
                 if(id==R.id.meditation){
-                    Toast.makeText(HomeActivity.this, "Meditation", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(HomeActivity.this, "Meditation", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(HomeActivity.this, Meditation.class);
+                    startActivity(intent);
                 }
                 else if(id==R.id.badges){
                     Toast.makeText(HomeActivity.this, "Badges", Toast.LENGTH_SHORT).show();
                 }
                 else if(id==R.id.alarms){
-                    Toast.makeText(HomeActivity.this, "Alarms", Toast.LENGTH_SHORT).show();
+
+                    //Toast.makeText(HomeActivity.this, "Alarms", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(HomeActivity.this, AlarmMe.class);
+                    startActivity(intent);
                 }
                 else if(id==R.id.about){
                     Toast.makeText(HomeActivity.this, "About Us", Toast.LENGTH_SHORT).show();
                 }
                 else if(id==R.id.w_l_g){
-                    Toast.makeText(HomeActivity.this, "Weight Loss Graph", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(HomeActivity.this, "Weight Loss Graph", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(HomeActivity.this, WeightLossGraph.class);
+                    startActivity(intent);
                 }
                 else if(id==R.id.history){
-                    Toast.makeText(HomeActivity.this, "History", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(HomeActivity.this, History.class);
+                    startActivity(intent);
                 }
                 else if(id==R.id.sign_out){
                     Toast.makeText(HomeActivity.this, "Sign Out", Toast.LENGTH_SHORT).show();

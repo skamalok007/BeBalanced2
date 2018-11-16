@@ -48,17 +48,13 @@
             android:layout_gravity="center">
 
             <ImageButton
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/play"
                 android:contentDescription="Play Button"
                 android:src="@drawable/play"/>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pause"
-                android:contentDescription="Pause Button"
-                android:src="@drawable/pause"/>
+
         </LinearLayout>
 
 
